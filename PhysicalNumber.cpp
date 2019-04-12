@@ -39,13 +39,7 @@ using namespace ariel;
        this->unit=temp.unit;
        return *this;
     }
-    // PhysicalNumber& PhysicalNumber::operator=(const PhysicalNumber& n){
-    //     PhysicalNumber temp(0,this->unit);
-    //     PhysicalNumber ans = findGroup(temp,n,1);
-    //     this->unit=ans.unit;
-    //     this->value=ans.value;
-    //     return *this;
-    // }
+  
 /** prefix operator increment / decrement -(a++)**/
     PhysicalNumber& PhysicalNumber::operator++(){
         
@@ -175,6 +169,7 @@ using namespace ariel;
            }
            type=type+temp[i];
        }
+       cout<<num<<endl; //------------------------------
       double value = std::stod(num);
 
       //puting the value and the type into the physical number
