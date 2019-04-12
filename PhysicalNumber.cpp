@@ -153,7 +153,7 @@ using namespace ariel;
             type ="[ton]";
         }
       
-        os<<  setprecision(count)<<n.value<<type;
+        os<<  setprecision(6)<<n.value<<type;
         return os;
     }
     istream& ariel::operator>>(istream& is ,  PhysicalNumber& n){
