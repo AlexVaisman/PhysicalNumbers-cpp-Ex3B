@@ -41,7 +41,7 @@ using namespace ariel;
     }
     PhysicalNumber& PhysicalNumber::operator=(const PhysicalNumber& n){
         PhysicalNumber temp(0,n.unit);
-        PhysicalNumber ans = findGroup(temp,n,1);
+        PhysicalNumber ans = findGroup(n,temp,1);
         this->unit=ans.unit;
         this->value=ans.value;
         return *this;
