@@ -109,6 +109,7 @@ using namespace ariel;
         return false;
     }
     const bool ariel::operator!=(const PhysicalNumber& a,const PhysicalNumber& b ){
+        PhysicalNumber test = PhysicalNumber::findGroup(a,b,1);
         if(a.value!=b.value||a.unit!=b.unit){
             return true;
         }
