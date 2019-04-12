@@ -59,7 +59,7 @@ namespace ariel {
    
         /** output / input stream **/
             friend ostream& operator<<(ostream& os , const PhysicalNumber& n); 
-            friend istream& operator>>(istream& is , const PhysicalNumber& n);    
+            friend istream& operator>>(istream& is ,  PhysicalNumber& n);    
 
 
 
