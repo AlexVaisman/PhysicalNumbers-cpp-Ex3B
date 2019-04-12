@@ -32,8 +32,8 @@ namespace ariel {
 
 
         /** binary operator methods **/
-         const  PhysicalNumber operator-(const PhysicalNumber& n );
-         const  PhysicalNumber operator+(const PhysicalNumber& n );
+         const  PhysicalNumber operator-(const PhysicalNumber& n )const;
+         const  PhysicalNumber operator+(const PhysicalNumber& n )const;
            PhysicalNumber& operator+=(const PhysicalNumber& n );
            PhysicalNumber& operator-=(const PhysicalNumber& n );
            PhysicalNumber& operator=(const PhysicalNumber& n);
