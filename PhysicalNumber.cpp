@@ -16,14 +16,14 @@ using namespace ariel;
         return PhysicalNumber(this->value,this->unit);
     }
     const PhysicalNumber PhysicalNumber::operator-() const{
-        return PhysicalNumber((-1)*(this->value),this->unit);
+        return PhysicalNumber((-1)*(this->value),this->unit);   
     }
 /** binary operator methods - adding to this**/
-     PhysicalNumber PhysicalNumber::operator-(const PhysicalNumber& n ){
+     const PhysicalNumber PhysicalNumber::operator-(const PhysicalNumber& n ){
         PhysicalNumber temp = findGroup(*this,n,0);
         return temp;
     }
-     PhysicalNumber PhysicalNumber::operator+(const PhysicalNumber& n ){
+     const PhysicalNumber PhysicalNumber::operator+(const PhysicalNumber& n ){
         PhysicalNumber temp = findGroup(*this,n,1);
         return temp;
     }
