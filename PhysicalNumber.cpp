@@ -2,6 +2,7 @@
 #include <iostream>
 #include <stdexcept>
 #include <iomanip>
+#include <string> 
 using namespace ariel;
 
 /** constructor **/
@@ -155,9 +156,68 @@ using namespace ariel;
         os<<  setprecision(count)<<n.value<<type;
         return os;
     }
-    istream& ariel::operator>>(istream& is , const PhysicalNumber& n){
-       
-        return is;
+    istream& ariel::operator>>(istream& is ,  PhysicalNumber& n){
+       string temp;
+       is>>temp;
+       string num;
+       string type;
+       // finding the value and the type
+       int j;
+       for(int i =0;i<temp.length();i++){
+           if(temp[i]=='['){
+               j=i+1;
+               break;
+           }
+           num=num+temp[i];
+       }
+
+         for(int i =j;i<temp.length();i++){
+           if(temp[i]==']'){
+               break;
+           }
+           type=type+temp[i];
+       }
+      double value = std::stod(num);
+
+      //puting the value and the type into the physical number
+        Unit unit ;
+      if(type=="m"){
+          n.value=value;
+          n.unit=M;
+      }
+      if(type=="cm"){
+          n.value=value;
+          n.unit=CM;
+      }
+      if(type=="km"){
+          n.value=value;
+          n.unit=KM;
+      }
+      if(type=="sec"){
+          n.value=value;
+          n.unit=SEC;
+      }
+      if(type=="min"){
+          n.value=value;
+          n.unit=MIN;
+      }
+      if(type=="hour"){
+          n.value=value;
+          n.unit=HOUR;
+      }
+      if(type=="g"){
+          n.value=value;
+          n.unit=G;
+      }
+      if(type=="kg"){
+          n.value=value;
+          n.unit=KG; 
+      }
+      if(type=="ton"){
+          n.value=value;
+          n.unit=TON; 
+      }
+       return is;
     }
 
 /** finds the correct group for the units**/
