@@ -109,10 +109,10 @@ using namespace ariel;
         return false;
     }
     const bool ariel::operator!=(const PhysicalNumber& a,const PhysicalNumber& b ){
-        if(a.value==b.value&&a.unit==b.unit){
-            return false;
+        if(a.value!=b.value||a.unit!=b.unit){
+            return true;
         }
-        return true;
+        return false;
     }
 
 
