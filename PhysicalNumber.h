@@ -32,11 +32,11 @@ namespace ariel {
 
 
         /** binary operator methods **/
-         const  PhysicalNumber operator-(const PhysicalNumber& n )const;
-         const  PhysicalNumber operator+(const PhysicalNumber& n )const;
-           PhysicalNumber& operator+=(const PhysicalNumber& n );
-           PhysicalNumber& operator-=(const PhysicalNumber& n );
-        //    PhysicalNumber& operator=(const PhysicalNumber& n);
+        const  PhysicalNumber operator-(const PhysicalNumber& n )const;
+        const  PhysicalNumber operator+(const PhysicalNumber& n )const;
+        PhysicalNumber& operator+=(const PhysicalNumber& n );
+        PhysicalNumber& operator-=(const PhysicalNumber& n );
+      
 
         /** prefix operator increment / decrement -(++a)**/
            PhysicalNumber& operator++();
@@ -44,7 +44,7 @@ namespace ariel {
 
         /** postfix operator increment / decrement -(a++) **/
            const PhysicalNumber operator++(int dummy_flag_for_postfix_increment);
-           const PhysicalNumber operator--(int dummy_flag_for_postfix_decrement);  //bug?
+           const PhysicalNumber operator--(int dummy_flag_for_postfix_decrement);  
 
 
 
