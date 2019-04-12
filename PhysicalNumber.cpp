@@ -117,13 +117,7 @@ using namespace ariel;
 /** output / input stream **/
     ostream& ariel::operator<<(ostream& os , const PhysicalNumber& n){
         int un = n.unit;
-        int count = 0;
-        int temp = n.value;
-
-        while(temp>0){
-            temp = temp/10;
-            count++;
-        }
+      
         string type;
         if(un==0){
             type ="[m]";
