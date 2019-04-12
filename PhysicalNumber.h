@@ -36,7 +36,7 @@ namespace ariel {
          const  PhysicalNumber operator+(const PhysicalNumber& n )const;
            PhysicalNumber& operator+=(const PhysicalNumber& n );
            PhysicalNumber& operator-=(const PhysicalNumber& n );
-           PhysicalNumber& operator=(const PhysicalNumber& n);
+        //    PhysicalNumber& operator=(const PhysicalNumber& n);
 
         /** prefix operator increment / decrement -(++a)**/
            PhysicalNumber& operator++();
