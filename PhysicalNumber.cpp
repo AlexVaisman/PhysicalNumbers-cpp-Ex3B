@@ -117,7 +117,7 @@ using namespace ariel;
 /** output / input stream **/
     ostream& ariel::operator<<(ostream& os , const PhysicalNumber& n){
         int un = n.unit;
-        int count = 6;
+        int count = 5;
         int temp = n.value;
 
         while(temp>0){
