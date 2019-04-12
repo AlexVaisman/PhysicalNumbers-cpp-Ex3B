@@ -40,8 +40,10 @@ using namespace ariel;
        return *this;
     }
     PhysicalNumber& PhysicalNumber::operator=(const PhysicalNumber& n){
-        this->unit=n.unit;
-        this->value=n.value;
+        PhysicalNumber temp(0,n.unit);
+        PhysicalNumber ans = findGroup(temp,n,1);
+        this->unit=ans.unit;
+        this->value=ans.value;
         return *this;
     }
 /** prefix operator increment / decrement -(a++)**/
