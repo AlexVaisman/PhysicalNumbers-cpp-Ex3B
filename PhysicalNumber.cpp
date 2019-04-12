@@ -259,7 +259,7 @@ using namespace ariel;
 
      }
 
-    /** return number between 1-9 **/
+    
     PhysicalNumber PhysicalNumber::distanceCase(const PhysicalNumber a,const PhysicalNumber b,int op){
         if(a.unit== CM && b.unit== CM){
             if(op == 0) {
@@ -361,7 +361,7 @@ using namespace ariel;
 
         return a;
      }
-    /** return number between 10-18 **/
+    
     PhysicalNumber PhysicalNumber::weightCase(const PhysicalNumber a,const PhysicalNumber b,int op){
         
         if(a.unit==G && b.unit==G){
@@ -461,7 +461,7 @@ using namespace ariel;
         return a;
     }
 
-    /** return number between 19-27 **/
+   
     PhysicalNumber PhysicalNumber::timeCase(const PhysicalNumber a,const PhysicalNumber b,int op){
         if(a.unit == SEC && b.unit==SEC){
             if(op == 0){
