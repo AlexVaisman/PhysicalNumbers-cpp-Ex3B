@@ -153,6 +153,13 @@ using namespace ariel;
        is>>temp;
        string num;
        string type;
+       //checking input
+        if(temp[0]!='0'&&temp[0]!='1'&&temp[0]!='2'&&temp[0]!='3'&&temp[0]!='4'&&temp[0]!='5'&&temp[0]!='6'&&temp[0]!='7'&&temp[0]!='8'&&temp[0]!='9'){
+              throw std::invalid_argument("Invalid input123123123123 !!");
+        }
+        if(temp[temp.length()-1]!=']'){
+            throw std::invalid_argument("Invalid input!!");
+        }
        // finding the value and the type
        int j;
        for(int i =0;i<temp.length();i++){
@@ -178,37 +185,40 @@ using namespace ariel;
           n.value=value;
           n.unit=M;
       }
-      if(type=="cm"){
+      else if(type=="cm"){
           n.value=value;
           n.unit=CM;
       }
-      if(type=="km"){
+      else if(type=="km"){
           n.value=value;
           n.unit=KM;
       }
-      if(type=="sec"){
+      else if(type=="sec"){
           n.value=value;
           n.unit=SEC;
       }
-      if(type=="min"){
+      else if(type=="min"){
           n.value=value;
           n.unit=MIN;
       }
-      if(type=="hour"){
+      else if(type=="hour"){
           n.value=value;
           n.unit=HOUR;
       }
-      if(type=="g"){
+      else if(type=="g"){
           n.value=value;
           n.unit=G;
       }
-      if(type=="kg"){
+      else if(type=="kg"){
           n.value=value;
           n.unit=KG; 
       }
-      if(type=="ton"){
+      else if(type=="ton"){
           n.value=value;
           n.unit=TON; 
+      }
+      else{
+          throw std::invalid_argument("Invalid input !!");
       }
        return is;
     }
