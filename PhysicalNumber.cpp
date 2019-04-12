@@ -70,7 +70,7 @@ using namespace ariel;
  /**  friend bigger/smaller operators - (a < b)...**/
     const bool ariel::operator<(const PhysicalNumber& a,const PhysicalNumber& b ){
         PhysicalNumber temp = PhysicalNumber::findGroup(a,b,0);
-        cout<<a<<" < "<<b<<endl;//---------------------------
+        
         if(temp.value<0){
             return true;
         }
@@ -78,7 +78,7 @@ using namespace ariel;
     }
     const bool ariel::operator>(const PhysicalNumber& a,const PhysicalNumber& b ){
         PhysicalNumber temp = PhysicalNumber::findGroup(a,b,0);
-        cout<<a<<" > "<<b<<endl;//---------------------------
+        
         if(temp.value>0){
             return true;
         }
@@ -86,7 +86,7 @@ using namespace ariel;
     }
     const bool ariel::operator<=(const PhysicalNumber& a,const PhysicalNumber& b ){
         PhysicalNumber temp = PhysicalNumber::findGroup(a,b,0);
-        cout<<a<<" <= "<<b<<endl;//---------------------------
+        
         if(temp.value<=0){
             return true;
         }
@@ -94,7 +94,7 @@ using namespace ariel;
     }
     const bool ariel::operator>=(const PhysicalNumber& a,const PhysicalNumber& b ){
         PhysicalNumber temp = PhysicalNumber::findGroup(a,b,0);
-        cout<<a<<" >= "<<b<<endl;//---------------------------
+       
         if(temp.value>=0){
             return true;
         }
@@ -102,7 +102,7 @@ using namespace ariel;
     }
     const bool ariel::operator==(const PhysicalNumber& a,const PhysicalNumber& b ){
         PhysicalNumber test = PhysicalNumber::findGroup(a,b,0);
-        cout<<a<<" == "<<b<<endl;//---------------------------
+        
         if(test.value==0){
             return true;
         }
@@ -110,7 +110,7 @@ using namespace ariel;
     }
     const bool ariel::operator!=(const PhysicalNumber& a,const PhysicalNumber& b ){
         PhysicalNumber test = PhysicalNumber::findGroup(a,b,0);
-        cout<<a<<" != "<<b<<endl;//---------------------------
+        
         if(test.value!=0){
             return true;
         }
