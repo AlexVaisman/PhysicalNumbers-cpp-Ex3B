@@ -19,11 +19,11 @@ using namespace ariel;
         return PhysicalNumber((-1)*(this->value),this->unit);   
     }
 /** binary operator methods - adding to this**/
-     const PhysicalNumber PhysicalNumber::operator-(const PhysicalNumber& n ){
+     const PhysicalNumber PhysicalNumber::operator-(const PhysicalNumber& n )const{
         PhysicalNumber temp = findGroup(*this,n,0);
         return temp;
     }
-     const PhysicalNumber PhysicalNumber::operator+(const PhysicalNumber& n ){
+     const PhysicalNumber PhysicalNumber::operator+(const PhysicalNumber& n )const{
         PhysicalNumber temp = findGroup(*this,n,1);
         return temp;
     }
