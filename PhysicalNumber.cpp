@@ -155,10 +155,10 @@ using namespace ariel;
        string type;
        //checking input
         if(temp[0]!='0'&&temp[0]!='1'&&temp[0]!='2'&&temp[0]!='3'&&temp[0]!='4'&&temp[0]!='5'&&temp[0]!='6'&&temp[0]!='7'&&temp[0]!='8'&&temp[0]!='9'){
-              throw std::invalid_argument("Invalid input123123123123 !!");
+            return is;
         }
         if(temp[temp.length()-1]!=']'){
-            throw std::invalid_argument("Invalid input!!");
+           return is;
         }
        // finding the value and the type
        int j;
@@ -176,7 +176,7 @@ using namespace ariel;
            }
            type=type+temp[i];
        }
-       cout<<temp<<endl; //------------------------------
+      
       double value = std::stod(num);
 
       //puting the value and the type into the physical number
@@ -218,7 +218,7 @@ using namespace ariel;
           n.unit=TON; 
       }
       else{
-          throw std::invalid_argument("Invalid input !!");
+         return is;
       }
        return is;
     }
