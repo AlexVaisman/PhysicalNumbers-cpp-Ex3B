@@ -103,15 +103,15 @@ using namespace ariel;
     const bool ariel::operator==(const PhysicalNumber& a,const PhysicalNumber& b ){
         PhysicalNumber test = PhysicalNumber::findGroup(a,b,0);
         cout<<a<<" == "<<b<<endl;//---------------------------
-        if(a.value==b.value&&a.unit==b.unit&&test.value==0){
+        if(test.value==0){
             return true;
         }
         return false;
     }
     const bool ariel::operator!=(const PhysicalNumber& a,const PhysicalNumber& b ){
-        PhysicalNumber test = PhysicalNumber::findGroup(a,b,1);
+        PhysicalNumber test = PhysicalNumber::findGroup(a,b,0);
         cout<<a<<" != "<<b<<endl;//---------------------------
-        if(a.value!=b.value||a.unit!=b.unit){
+        if(test.value!=0){
             return true;
         }
         return false;
