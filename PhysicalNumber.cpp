@@ -169,7 +169,7 @@ using namespace ariel;
            }
            type=type+temp[i];
        }
-       cout<<num<<endl; //------------------------------
+       cout<<temp<<endl; //------------------------------
       double value = std::stod(num);
 
       //puting the value and the type into the physical number
